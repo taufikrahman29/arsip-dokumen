@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SISTEM ARSIP DOKUMEN LAPAS KELAS IIA BEKASI
 
 Aplikasi berbasis web **Sistem Informasi Pengelolaan dan Penyimpanan Dokumen Resmi** untuk Lembaga Pemasyarakatan (Lapas) Kelas IIA Bekasi. Dibangun menggunakan **PHP Native (PDO)**, **MySQL**, **HTML5**, **CSS3**, dan **Vanilla JavaScript**.
@@ -136,3 +137,7 @@ arsip-dokumen/
 
 ---
 © 2026 **Lapas Kelas IIA Bekasi** — Sistem Informasi Arsip Dokumen.
+=======
+# arsip-dokumen
+Aplikasi Arsip Dokumen PHP
+>>>>>>> 6d4a0d3bf2dc9c37d59490a536d6d17517a26831
