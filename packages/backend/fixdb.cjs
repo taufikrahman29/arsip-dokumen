@@ -1,0 +1,1 @@
+const { PrismaClient } = require('@prisma/client'); const prisma = new PrismaClient(); async function run() { await prisma.appSetting.updateMany({ data: { heroEmblem: null, heroBg: null, siteLogo: null } }); console.log('Done'); } run().catch(console.error).finally(()=>prisma.$disconnect());
