@@ -15,7 +15,7 @@ export async function getCategories() {
     },
   });
 
-  return categories.map((cat) => ({
+  return categories.map((cat: any) => ({
     ...cat,
     documentCount: cat._count.documents,
     _count: undefined,

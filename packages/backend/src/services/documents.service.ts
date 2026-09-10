@@ -43,7 +43,7 @@ interface DocumentQuery {
 export async function getDocuments(query: DocumentQuery) {
   const { search, categoryId, year, visibility, page, limit, sortBy, sortOrder, includePrivate } = query;
 
-  const where: Prisma.DocumentWhereInput = {
+  const where: any = {
     deletedAt: null, // Exclude soft-deleted
   };
 
@@ -66,7 +66,7 @@ export async function getDocuments(query: DocumentQuery) {
     ];
   }
 
-  const orderBy: Prisma.DocumentOrderByWithRelationInput = {};
+  const orderBy: any = {};
   const sortField = sortBy === 'created_at' ? 'createdAt' : sortBy === 'document_date' ? 'documentDate' : sortBy;
   (orderBy as any)[sortField] = sortOrder;
 
@@ -85,7 +85,7 @@ export async function getDocuments(query: DocumentQuery) {
   ]);
 
   // Serialize BigInt to number for JSON
-  const serializedData = data.map((doc) => ({
+  const serializedData = data.map((doc: any) => ({
     ...doc,
     fileSize: Number(doc.fileSize),
   }));
